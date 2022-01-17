@@ -20,4 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/tweets', [TweetController::class,'index']);
+Route::post('/tweets', [TweetController::class,'store']);
 Route::get('/tweets/{tweet}', [TweetController::class,'show']);
