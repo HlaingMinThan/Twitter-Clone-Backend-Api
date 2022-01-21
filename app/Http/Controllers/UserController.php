@@ -11,4 +11,9 @@ class UserController extends Controller
     {
         return $user;
     }
+
+    public function getTweets(User $user)
+    {
+        return $user->tweets()->latest()->paginate(10);
+    }
 }

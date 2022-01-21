@@ -25,4 +25,5 @@ Route::post('/tweets', [TweetController::class,'store']);
 Route::get('/tweets/{tweet}', [TweetController::class,'show']);
 
 /**-----Users Api----- */
+Route::get('/users/{user}/tweets', [UserController::class,'getTweets']);
 Route::get('/users/{user}', [UserController::class,'show']);
